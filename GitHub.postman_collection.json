@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "76b6b07b-6f1d-4272-93a5-20d04bd8f687",
+		"name": "GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GitHub GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/users/reethu1219/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"reethu1219",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GitHub PATCH",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "597fa5da4dc7daa486990b521bd2bd3de6f25fda",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r    \"name\": \"Postman2\",\r    \"desription\": \"Test Repo\",\r    \"homepage\": \"https://github.com/\",\r    \"private\": false,\r    \"has_issues\": true,\r    \"has_projects\": true,\r    \"has_wiki\": true\r}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/reethu1219/Postman",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"reethu1219",
+						"Postman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GitHub DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "token 597fa5da4dc7daa486990b521bd2bd3de6f25fda",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/reethu1219/Postman",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"reethu1219",
+						"Postman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GitHUb POST",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "reethacm9819",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "reethu1219",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r    \"name\": \"Postman\",\r    \"desription\": \"Test Repo\",\r    \"homepage\": \"https://github.com/\",\r    \"private\": false,\r    \"has_issues\": true,\r    \"has_projects\": true,\r    \"has_wiki\": true\r}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
